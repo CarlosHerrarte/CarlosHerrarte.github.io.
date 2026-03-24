@@ -1,3 +1,168 @@
-Carlos Herrarte
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
 
-Hola
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .caja1 {
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .subcaja {
+            flex: 1;
+            background-color: #a8a8a8;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px #333;
+        }
+
+         .fila {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .izquierda {
+        text-align: left;
+    }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        /* Estilo de la foto de perfil */
+        .perfil {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        /* Cabeza */
+        .perfil::before {
+            content: ""; 
+            width: 50px;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Hombros */
+        .perfil::after {
+            content: "";
+            width: 80px;
+            height: 40px;
+            background-color: #eee;
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            bottom: 16%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+
+    <!-- Foto de perfil tipo anónimo -->
+    <div class="caja1">
+        <div class="perfil"></div>
+    </div>
+
+    <div class="caja1">
+        <h2> Informacion Personal</h2>
+        
+        <div class="fila">
+            <div class="subcaja">
+                <h2>Nombre</h2>
+                <p>Carlos Herrarte</p>
+            </div>
+            <div class="subcaja">
+                <h2>Telefono</h2>
+                <p>+502 1234 5678</p>
+            </div>
+
+            <div class="subcaja">
+                <h2>Correo</h2>
+                <p>estudiantegalileo@edu.com</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="caja1">
+        <h2> Habilidades </h2>
+        
+        <div class="fila">
+            <div class="subcaja">
+                <h2>HTML</h2>
+                <p>Nivel Basico</p>
+            </div>
+            <div class="subcaja">
+                <h2>PHP</h2>
+                <p>Nivel Basico</p>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="subcaja">
+                <h2>C#</h2>
+                <p>Nivel Basico</p>
+            </div>
+            <div class="subcaja">
+                <h2>JavaScript</h2>
+                <p>Nivel Basico</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="caja1">
+        <h2>Experiencia laboral</h2>
+        <h3>Desarrolador Web Junior</h3>
+        <p class="izquierda">Empresa: TechSolutions S.A.</p>
+        <p class="izquierda">Duración: Enero 2024 – Enero 2025</p>
+        <ul>
+            <li class="izquierda">Desarrollo y mantenimiento de páginas web utilizando HTML, CSS y JavaScript.</li>
+            <li class="izquierda">Apoyo en la creación de interfaces de usuario simples y responsivas.</li>
+            <li class="izquierda">Corrección de errores (debugging) y mejora del rendimiento de sitios web existentes.</li>
+            <li class="izquierda">Colaboración con el equipo de diseño para implementar nuevas funcionalidades.</li>
+            <li class="izquierda">Uso básico de control de versiones con Git.</li>
+        </ul>
+
+        <h2>Link Github</h2>
+        <ul>
+            <li class="izquierda"><a href="//carlosherrarte.github.io/CarlosHerrarte.github.io./" target="_blank">My Github</a></li>
+        </ul>
+        
+    </div>
+
+</div>
+
+</body>
+</html>
